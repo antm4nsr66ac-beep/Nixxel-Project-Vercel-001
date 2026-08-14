@@ -1,0 +1,62 @@
+/* BOWWW! Global chaos styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  background-image: 
+    radial-gradient(circle at 20% 50%, #0a0a0a 0%, #000000 100%);
+  min-height: 100vh;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch-text {
+  animation: glitch 0.3s infinite;
+  color: #ff00ff;
+  text-shadow: 
+    2px 0 #00ff00,
+    -2px 0 #ff0000;
+}
+
+.hacker-border {
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(0, 255, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
